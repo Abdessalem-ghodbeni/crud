@@ -1,0 +1,46 @@
+{
+  "eventListes": [
+    {
+      "eventname": "mathematique",
+      "categorie": "culturel",
+      "freshness": "event payé",
+      "price": 100,
+      "date": "2022-12-12T23:00:00.000Z",
+      "place": "faculte des sciences de monastir",
+      "id": 2
+    },
+    {
+      "eventname": "clubFsm",
+      "categorie": "culturel",
+      "freshness": "event from university",
+      "price": 15,
+      "date": "2022-12-12T23:00:00.000Z",
+      "place": "amphy5",
+      "id": 3
+    },
+    {
+      "eventname": "course",
+      "categorie": "sportive",
+      "freshness": "event payé",
+      "price": 55,
+      "date": "2022-12-26T23:00:00.000Z",
+      "place": "monastir",
+      "id": 4
+    }
+  ],
+  "signup": [
+    {
+      "firstname": "arij",
+      "lastname": "mabrouk",
+      "class": "informatique",
+      "university": "fsm",
+      "email": "arij@gmail.com",
+      "country": "silyena",
+      "password": "arouja123",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,59 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>Creat your acount</h3>
+            <p class="blue-text">Just stay her ! your are welcome</p>
+            <div class="card">
+
+                <form class="form-card" [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">First name</label>
+                            <input type="text" id="fname" formControlName="firstname" name="fname"
+                                placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Last
+                                name<span class="text-danger"> *</span></label> <input type="text" required id="lname"
+                                name="lname" placeholder="Enter your last name" formControlName="lastname"> </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">classe<span class="text-danger">
+                                    *</span></label> <input type="text" id="email" name="email"
+                                placeholder="Enter your class" formControlName="class"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">
+                                university <span class="text-danger"> *</span></label>
+                            <input type="text" id="mob" name="mob" placeholder="Enter your university"
+                                formControlName="university">
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                class="form-control-label px-3">email<span class="text-danger">
+                                    *</span></label> <input type="email" id="email" name="email" formControlName="email"
+                                placeholder="Enter your @email"> </div>
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">
+                                country <span class="text-danger"> *</span></label>
+                            <input type="text" id="mob" name="mob" placeholder="Enter your country"
+                                formControlName="country">
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"> <label
+                                class="form-control-label px-3">Password<span class="text-danger"> *</span></label>
+                            <input type="password" id="ans" name="ans" placeholder="Enter your password"
+                                formControlName="password">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <button type="submit" class="btn btn-success ml-5" [disabled]="registerForm.invalid">
+                            signup</button>
+                        <button type="submit" class="btn btn-danger mr-5" [disabled]="registerForm.valid"
+                            [routerLink]="">
+                            cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

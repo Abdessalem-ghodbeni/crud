@@ -1,16 +1,20 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog'
-import { DialogComponent } from './dialog/dialog.component';
-import { ApiService } from './services/api.service';
+
+
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
+import { ApiService } from 'src/app/services/api.service';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-add-event',
+  templateUrl: './add-event.component.html',
+  styleUrls: ['./add-event.component.scss']
 })
-export class AppComponent {
+export class AddEventComponent implements OnInit {
+
   displayedColumns: string[] = ['EventName', 'categorie', 'freshness', 'price', 'date', 'place', 'Action'];
   dataSource!: MatTableDataSource<any>;
 
@@ -74,4 +78,5 @@ export class AppComponent {
       this.dataSource.paginator.firstPage();
     }
   }
+
 }

@@ -1,0 +1,54 @@
+<h1 mat-dialog-title> Ajouter votre evenement </h1>
+<div mat-dialog-content>
+
+    <form [formGroup]="EventForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Event Name</mat-label>
+            <input matInput placeholder="event name" formControlName="eventname">
+
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Event Categorie</mat-label>
+            <mat-select placeholder=" categorie" formControlName="categorie">
+                <mat-option value="sportive"> sportive</mat-option>
+                <mat-option value="culturel"> culturel</mat-option>
+                <mat-option value="art"> art</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="w-100" appearance="outline">
+            <mat-label>choisir date</mat-label>
+            <input matInput [matDatepicker]="naissance" placeholder="date event" formControlName="date" />
+            <mat-datepicker-toggle matSuffix [for]="naissance"></mat-datepicker-toggle>
+            <mat-datepicker #naissance></mat-datepicker>
+
+        </mat-form-field>
+        <label for="">
+            <h1>Event statu</h1>
+        </label>
+        <mat-radio-group class="example-radio-group" formControlName="freshness">
+            <mat-radio-button class="example-radio-button" *ngFor="let fresh of freshnessList  " [value]="fresh">
+                {{fresh}}
+
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field appearance="outline">
+            <mat-label>Event place</mat-label>
+            <input matInput placeholder="event place" formControlName="place">
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Event price</mat-label>
+            <input matInput type="number" placeholder="event price" formControlName="price">
+
+        </mat-form-field>
+    </form>
+
+</div>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close> Close</button>
+    <button style="margin-left: 10px;" mat-raised-button color="primary" (click)="addEvent()"> {{actionBtn}}</button>
+</div>
